@@ -128,7 +128,7 @@
             <h2>조합소개</h2>
             <ul>
               <li><a href="#chairperson" data-page-link="chairperson">위원장 소개</a></li>
-              <li><a href="#" data-placeholder>조직도</a></li>
+              <li><a href="#organization" data-page-link="organization">조직도</a></li>
               <li><a href="#" data-placeholder>집행부소개</a></li>
               <li><a href="#" data-placeholder>본부소개</a></li>
               <li><a href="#" data-placeholder>연혁</a></li>
@@ -178,10 +178,10 @@
       <header class="sub-header">
         <a class="sub-brand" href="#" data-home aria-label="한국국토정보공사노동조합 홈">
           <img
-            src="assets/union-logo.png"
+            src="assets/board-logo.png"
             alt="민주노총 전국공공운수노조 한국국토정보공사노동조합"
-            width="304"
-            height="91"
+            width="293"
+            height="78"
           />
         </a>
 
@@ -208,14 +208,14 @@
 
       <section class="sub-visual">
         <div>
-          <h1>위원장 소개</h1>
-          <p><a href="#" data-home>home</a> <span aria-hidden="true">›</span> 조합소개 <span aria-hidden="true">›</span> 위원장 소개</p>
+          <h1 id="sub-visual-title">위원장 소개</h1>
+          <p><a href="#" data-home>home</a> <span aria-hidden="true">›</span> 조합소개 <span aria-hidden="true">›</span> <span id="sub-visual-current">위원장 소개</span></p>
         </div>
       </section>
 
       <nav class="intro-tabs" aria-label="조합소개 하위 메뉴">
         <a class="is-active" href="#chairperson" data-page-link="chairperson">위원장 소개</a>
-        <a href="#" data-placeholder>조직도</a>
+        <a href="#organization" data-page-link="organization">조직도</a>
         <a href="#" data-placeholder>집행부소개</a>
         <a href="#" data-placeholder>본부소개</a>
         <a href="#" data-placeholder>연혁</a>
@@ -226,7 +226,7 @@
           <h2>조합소개</h2>
           <nav>
             <a class="is-active" href="#chairperson" data-page-link="chairperson">위원장 소개</a>
-            <a href="#" data-placeholder>조직도</a>
+            <a href="#organization" data-page-link="organization">조직도</a>
             <a href="#" data-placeholder>집행부소개</a>
             <a href="#" data-placeholder>본부소개</a>
             <a href="#" data-placeholder>연혁</a>
@@ -236,8 +236,8 @@
         <article class="sub-content">
           <div class="content-heading">
             <div>
-              <h2>위원장 소개</h2>
-              <p><a href="#" data-home>홈</a> <span aria-hidden="true">›</span> 조합소개 <span aria-hidden="true">›</span> 위원장 소개</p>
+              <h2 id="content-title">위원장 소개</h2>
+              <p><a href="#" data-home>홈</a> <span aria-hidden="true">›</span> 조합소개 <span aria-hidden="true">›</span> <span id="content-current">위원장 소개</span></p>
             </div>
             <div class="content-actions" aria-label="페이지 도구">
               <button type="button" aria-label="공유하기">
@@ -257,7 +257,7 @@
             </div>
           </div>
 
-          <section class="chairperson-card" aria-labelledby="chairperson-title">
+          <section class="page-panel chairperson-card" data-page-panel="chairperson" aria-labelledby="chairperson-title">
             <img
               class="chairperson-photo"
               src="assets/chairperson-photo.png"
@@ -292,11 +292,78 @@
             </div>
             <img
               class="chairperson-logo"
-              src="assets/union-logo.png"
+              src="assets/chairperson-bottom-logo.png"
               alt="한국국토정보공사노동조합"
-              width="304"
-              height="91"
+              width="511"
+              height="122"
             />
+          </section>
+
+          <section class="page-panel organization-page" data-page-panel="organization" aria-label="조직도" hidden>
+            <div class="organization-chart-wrap">
+              <img
+                class="organization-chart"
+                src="assets/organization-chart.png"
+                alt="한국국토정보공사노동조합 조직도"
+                width="770"
+                height="729"
+              />
+            </div>
+
+            <section class="union-principles" aria-labelledby="union-principles-title">
+              <h3 id="union-principles-title">한국국토정보공사노동조합</h3>
+              <div class="principle-board">
+                <div class="principle-tabs" role="tablist" aria-label="선언과 강령">
+                  <button
+                    class="principle-tab is-active"
+                    type="button"
+                    role="tab"
+                    aria-selected="true"
+                    aria-controls="principle-panel"
+                    data-principle-tab="declaration"
+                  >
+                    <svg viewBox="0 0 80 80" aria-hidden="true">
+                      <path d="M45 13 67 35 56 46 34 24zM29 29 51 51 42 60 20 38zM18 42 38 62M13 67h30" />
+                    </svg>
+                    <span>선 언</span>
+                  </button>
+                  <button
+                    class="principle-tab"
+                    type="button"
+                    role="tab"
+                    aria-selected="false"
+                    aria-controls="principle-panel"
+                    data-principle-tab="platform"
+                  >
+                    <svg viewBox="0 0 80 80" aria-hidden="true">
+                      <path d="M13 17 28 13 66 51 51 66zM24 21l35 35M13 17l4 20 10-10zM43 21l16 16M35 29l16 16M27 37l16 16" />
+                    </svg>
+                    <span>강 령</span>
+                  </button>
+                </div>
+
+                <article id="principle-panel" class="principle-detail" role="tabpanel" aria-live="polite">
+                  <h4 data-principle-title>선 언</h4>
+                  <div data-principle-body>
+                    <p>
+                      한국국토정보공사노동조합 조합원 일동은 민주화의 도도한 흐름과 호흡을 함께 하면서
+                      진정한 동지애로 강철같이 단결하여 어떠한 형태의 부당한 탄압이나 간섭에도 굴하지 않고
+                      자주적이고 민주적인 조합을 운영함으로써, 우리 자신의 노동권을 확립하여 정치적, 경제적,
+                      사회적, 지위향상을 기한다.
+                    </p>
+                    <p>
+                      우리는 공사내의 전근대적 비민주성을 척결하고 우리 자신의 창발성을 최대한 발휘하여
+                      국토정보의 발전에 노력하며 나아가 전문기술의 민족적 자립기반을 확립하고 사회공공성 강화에 이바지한다.
+                    </p>
+                    <p>
+                      우리는 민주적인 모든 노동단체와의 연대강화를 통하여 노동운동의 정통성과 자주성을 지키며
+                      결연한 단결력으로 민주복지국가 건설에 동참할 것을 엄숙히 선언한다.
+                    </p>
+                    <p class="principle-date">2015년 6월 4일<br />한국국토정보공사노동조합</p>
+                  </div>
+                </article>
+              </div>
+            </section>
           </section>
         </article>
       </div>

@@ -707,7 +707,7 @@ body.is-subpage .hero {
 
 .sub-brand {
   display: flex;
-  width: clamp(210px, 16vw, 260px);
+  width: clamp(245px, 18vw, 310px);
   align-items: center;
 }
 
@@ -1009,10 +1009,138 @@ body.is-subpage .hero {
 
 .chairperson-logo {
   display: block;
-  width: min(260px, 82%);
+  width: min(360px, 86%);
   height: auto;
   margin: 10px auto 0;
   mix-blend-mode: multiply;
+}
+
+.organization-page {
+  padding: 34px 0 20px;
+}
+
+.organization-chart-wrap {
+  padding: 8px 0 46px;
+  background: #fff;
+}
+
+.organization-chart {
+  display: block;
+  width: min(770px, 100%);
+  height: auto;
+  margin: 0 auto;
+}
+
+.union-principles {
+  margin-top: 8px;
+}
+
+.union-principles h3 {
+  position: relative;
+  margin: 0 0 26px;
+  padding-bottom: 14px;
+  color: #15202b;
+  font-size: clamp(1.65rem, 2.3vw, 2.25rem);
+  font-weight: 800;
+  letter-spacing: -0.06em;
+}
+
+.union-principles h3::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 1px;
+  background: #a89b49;
+  content: "";
+}
+
+.principle-board {
+  display: grid;
+  min-height: 390px;
+  grid-template-columns: minmax(300px, 42%) minmax(0, 1fr);
+  border: 1px solid #ececec;
+  background: #fff;
+}
+
+.principle-tabs {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-right: 1px solid #ececec;
+}
+
+.principle-tab {
+  display: flex;
+  min-height: 260px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+  color: #9b8f2b;
+  background: #fff;
+  border: 0;
+  border-right: 1px solid #ececec;
+  cursor: pointer;
+  transition:
+    color 0.22s ease,
+    background 0.22s ease;
+}
+
+.principle-tab:last-child {
+  border-right: 0;
+}
+
+.principle-tab:hover,
+.principle-tab:focus-visible,
+.principle-tab.is-active {
+  color: #fff;
+  background: #aaa25b;
+}
+
+.principle-tab svg {
+  width: 78px;
+  height: 78px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.principle-tab span {
+  font-size: 1.02rem;
+  font-weight: 500;
+  letter-spacing: 0.36em;
+}
+
+.principle-detail {
+  padding: clamp(30px, 4.5vw, 48px) clamp(28px, 5vw, 58px);
+}
+
+.principle-detail h4 {
+  margin: 0 0 16px;
+  color: #15202b;
+  font-size: clamp(1.6rem, 2.6vw, 2.25rem);
+  font-weight: 800;
+  letter-spacing: 0.18em;
+}
+
+.principle-detail p {
+  margin: 0 0 24px;
+  color: #87909b;
+  font-size: 1rem;
+  line-height: 1.9;
+  letter-spacing: -0.03em;
+  word-break: keep-all;
+}
+
+.principle-detail p:last-child {
+  margin-bottom: 0;
+}
+
+.principle-date {
+  margin-top: 34px !important;
+  text-align: right;
 }
 
 .toast {
@@ -1068,6 +1196,14 @@ body.is-subpage .hero {
   .sub-nav {
     gap: 28px;
     margin: 0 24px;
+  }
+
+  .principle-board {
+    grid-template-columns: minmax(260px, 38%) minmax(0, 1fr);
+  }
+
+  .principle-tab {
+    min-height: 220px;
   }
 }
 
@@ -1209,6 +1345,27 @@ body.is-subpage .hero {
     padding-left: 10px;
   }
 
+  .organization-page {
+    padding-top: 18px;
+  }
+
+  .organization-chart-wrap {
+    padding-bottom: 32px;
+  }
+
+  .principle-board {
+    grid-template-columns: 1fr;
+  }
+
+  .principle-tabs {
+    border-right: 0;
+    border-bottom: 1px solid #ececec;
+  }
+
+  .principle-tab {
+    min-height: 170px;
+  }
+
 }
 
 @media (max-width: 520px) {
@@ -1290,6 +1447,28 @@ body.is-subpage .hero {
 
   .chairperson-name {
     font-size: 1.58rem;
+  }
+
+  .principle-tab {
+    min-height: 128px;
+    gap: 14px;
+  }
+
+  .principle-tab svg {
+    width: 56px;
+    height: 56px;
+  }
+
+  .principle-tab span {
+    font-size: 0.92rem;
+  }
+
+  .principle-detail {
+    padding: 26px 20px;
+  }
+
+  .principle-detail p {
+    font-size: 0.88rem;
   }
 }
 
