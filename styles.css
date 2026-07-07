@@ -1019,8 +1019,29 @@ body.is-subpage .hero {
   padding: 34px 0 20px;
 }
 
+.organization-title {
+  position: relative;
+  margin: 0 0 28px;
+  padding-bottom: 12px;
+  color: #15202b;
+  font-size: 1.04rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  text-align: left;
+}
+
+.organization-title::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 58px;
+  height: 1px;
+  background: #a89b49;
+  content: "";
+}
+
 .organization-chart-wrap {
-  padding: 8px 0 46px;
+  padding: 0 0 46px;
   background: #fff;
 }
 
@@ -1115,23 +1136,23 @@ body.is-subpage .hero {
 }
 
 .principle-detail {
-  overflow-y: auto;
-  padding: clamp(30px, 4.5vw, 48px) clamp(28px, 4.2vw, 52px);
+  overflow: hidden;
+  padding: clamp(24px, 3.8vw, 38px) clamp(28px, 4.2vw, 52px);
 }
 
 .principle-detail h4 {
-  margin: 0 0 16px;
+  margin: 0 0 13px;
   color: #15202b;
-  font-size: clamp(1.6rem, 2.6vw, 2.25rem);
+  font-size: clamp(1.5rem, 2.3vw, 2rem);
   font-weight: 800;
   letter-spacing: 0.18em;
 }
 
 .principle-detail p {
-  margin: 0 0 24px;
+  margin: 0 0 18px;
   color: #87909b;
-  font-size: 1rem;
-  line-height: 1.9;
+  font-size: 0.96rem;
+  line-height: 1.72;
   letter-spacing: -0.03em;
   word-break: keep-all;
 }
@@ -1140,18 +1161,24 @@ body.is-subpage .hero {
   margin-bottom: 0;
 }
 
+.principle-detail.is-declaration {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
 .principle-detail.is-declaration h4 {
-  margin-bottom: 12px;
+  margin-bottom: 8px;
+  font-size: clamp(1.28rem, 1.8vw, 1.62rem);
 }
 
 .principle-detail.is-declaration p {
-  margin-bottom: 13px;
-  font-size: 0.9rem;
-  line-height: 1.7;
+  margin-bottom: 7px;
+  font-size: 0.78rem;
+  line-height: 1.45;
 }
 
 .principle-detail.is-declaration .principle-date {
-  margin-top: 14px !important;
+  margin-top: 6px !important;
 }
 
 .principle-date {
@@ -1372,6 +1399,10 @@ body.is-subpage .hero {
   .principle-board {
     height: auto;
     grid-template-columns: 1fr;
+  }
+
+  .principle-detail {
+    overflow: visible;
   }
 
   .principle-tabs {
