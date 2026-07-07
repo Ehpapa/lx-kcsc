@@ -4,7 +4,6 @@ const closeButton = document.querySelector("#menu-close");
 const toast = document.querySelector("#toast");
 const heroMedia = document.querySelector(".hero-media");
 const heroVideo = document.querySelector("#hero-video");
-const soundButton = document.querySelector("#sound-toggle");
 
 let lastFocusedElement = null;
 let toastTimer = null;
@@ -82,24 +81,10 @@ document.querySelectorAll("[data-placeholder]").forEach((link) => {
   });
 });
 
-heroVideo.addEventListener("loadedmetadata", () => {
-  soundButton.disabled = false;
-  soundButton.removeAttribute("title");
-});
-
 heroVideo.addEventListener("playing", () => {
   heroMedia.classList.add("is-playing");
 });
 
 heroVideo.addEventListener("pause", () => {
   heroMedia.classList.remove("is-playing");
-});
-
-soundButton.addEventListener("click", () => {
-  heroVideo.muted = !heroVideo.muted;
-  soundButton.classList.toggle("is-unmuted", !heroVideo.muted);
-  soundButton.setAttribute(
-    "aria-label",
-    heroVideo.muted ? "배경 영상 소리 켜기" : "배경 영상 음소거",
-  );
 });
