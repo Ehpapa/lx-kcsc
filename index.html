@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="민주노총 전국공공운수노조 한국국토정보공사노동조합 홈페이지"
+    />
+    <meta name="theme-color" content="#063b73" />
+    <title>한국국토정보공사노동조합</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">본문 바로가기</a>
+
+    <main id="main-content" class="hero">
+      <div class="hero-media" aria-hidden="true">
+        <img
+          class="hero-poster"
+          src="assets/hero-poster.png"
+          alt=""
+          width="1900"
+          height="900"
+        />
+        <video
+          id="hero-video"
+          class="hero-video"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+        >
+          <!-- 추후 전달받은 영상을 assets/hero.mp4로 저장하고 아래 줄의 주석을 해제하세요. -->
+          <!-- <source src="assets/hero.mp4" type="video/mp4" /> -->
+        </video>
+        <div class="hero-shade"></div>
+      </div>
+
+      <header class="site-header">
+        <a class="brand" href="#" aria-label="한국국토정보공사노동조합 홈">
+          <img
+            class="brand-symbol"
+            src="assets/union-symbol.png"
+            alt=""
+            width="71"
+            height="70"
+          />
+          <img
+            class="brand-wordmark"
+            src="assets/union-wordmark-white.png"
+            alt="민주노총 전국공공운수노조 한국국토정보공사노동조합"
+            width="228"
+            height="75"
+          />
+        </a>
+
+        <button
+          id="menu-open"
+          class="menu-open"
+          type="button"
+          aria-label="전체 메뉴 열기"
+          aria-controls="site-menu"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="header-tools" aria-label="사용자 메뉴">
+          <a href="#" data-placeholder>조합원 로그인</a>
+          <span class="header-divider" aria-hidden="true"></span>
+          <button class="language-button" type="button" aria-label="언어 선택">
+            KOR
+            <svg viewBox="0 0 16 16" aria-hidden="true">
+              <path d="m4 6 4 4 4-4" />
+            </svg>
+          </button>
+        </nav>
+      </header>
+
+      <section class="hero-copy" aria-labelledby="hero-title">
+        <p class="hero-kicker">KOREA LAND AND GEOSPATIAL INFORMATIX CORPORATION UNION</p>
+        <h1 id="hero-title">
+          함께 만드는 변화,<br />
+          <strong>당당한 우리의 내일</strong>
+        </h1>
+        <p class="hero-description">
+          조합원의 목소리가 존중받는 일터를 위해<br />
+          한국국토정보공사노동조합이 함께합니다.
+        </p>
+      </section>
+
+      <a class="news-float" href="#" data-placeholder aria-label="조합소식 바로가기">
+        <span class="news-icon" aria-hidden="true">
+          <svg viewBox="0 0 40 40">
+            <path d="M9 8h22v25H9z" />
+            <path d="M13 14h14M13 19h14M13 24h8M24 24h3M13 29h14" />
+          </svg>
+        </span>
+        <span>UNION NEWS</span>
+        <strong>조합소식</strong>
+      </a>
+
+      <div class="hero-bottom">
+        <a class="notice-preview" href="#" data-placeholder>
+          <span class="notice-label">NOTICE</span>
+          <span class="notice-title">한국국토정보공사노동조합 홈페이지에 오신 것을 환영합니다.</span>
+          <time datetime="2026-07-03">2026.07.03</time>
+          <span class="notice-arrow" aria-hidden="true">→</span>
+        </a>
+
+        <button
+          id="sound-toggle"
+          class="sound-toggle"
+          type="button"
+          aria-label="배경 영상 소리 켜기"
+          title="배경 영상 추가 후 사용할 수 있습니다"
+          disabled
+        >
+          <svg class="sound-on" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5 9v6h4l5 4V5L9 9H5Z" />
+            <path d="M17 9.5c.9 1.4.9 3.6 0 5M19.5 7c2.2 2.8 2.2 7.2 0 10" />
+          </svg>
+          <svg class="sound-off" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5 9v6h4l5 4V5L9 9H5Z" />
+            <path d="m17 9 5 6M22 9l-5 6" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="scroll-hint" aria-hidden="true">
+        <span>SCROLL</span>
+        <i></i>
+      </div>
+    </main>
+
+    <section
+      id="site-menu"
+      class="menu-overlay"
+      aria-label="전체 메뉴"
+      aria-hidden="true"
+    >
+      <div class="menu-ambient menu-ambient-one" aria-hidden="true"></div>
+      <div class="menu-ambient menu-ambient-two" aria-hidden="true"></div>
+
+      <div class="menu-topbar">
+        <p class="menu-eyebrow">LX KCSC UNION</p>
+        <div class="menu-account">
+          <button class="menu-language" type="button" aria-label="언어 선택">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="9" />
+              <path d="M3 12h18M12 3c3 3.3 3 14.7 0 18M12 3c-3 3.3-3 14.7 0 18" />
+            </svg>
+            KOR
+          </button>
+          <a href="#" data-placeholder>조합원 로그인</a>
+        </div>
+        <button id="menu-close" class="menu-close" type="button" aria-label="전체 메뉴 닫기">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <div class="menu-scroll">
+        <nav class="menu-grid" aria-label="주요 메뉴">
+          <section class="menu-group">
+            <h2>조합소개</h2>
+            <ul>
+              <li><a href="#" data-placeholder>위원장 소개</a></li>
+              <li><a href="#" data-placeholder>조직도</a></li>
+              <li><a href="#" data-placeholder>집행부소개</a></li>
+              <li><a href="#" data-placeholder>본부소개</a></li>
+              <li><a href="#" data-placeholder>연혁</a></li>
+            </ul>
+          </section>
+
+          <section class="menu-group">
+            <h2>조합활동</h2>
+            <ul>
+              <li><a href="#" data-placeholder>국토노보</a></li>
+              <li><a href="#" data-placeholder>조합소식</a></li>
+              <li><a href="#" data-placeholder>투쟁속보</a></li>
+              <li><a href="#" data-placeholder>조합일정</a></li>
+            </ul>
+          </section>
+
+          <section class="menu-group">
+            <h2>자료실</h2>
+            <ul>
+              <li><a href="#" data-placeholder>규약/규정</a></li>
+              <li><a href="#" data-placeholder>본부별 규정</a></li>
+              <li><a href="#" data-placeholder>회의자료</a></li>
+            </ul>
+          </section>
+
+          <section class="menu-group">
+            <h2>조합광장</h2>
+            <ul>
+              <li><a href="#" data-placeholder>익명게시판</a></li>
+              <li><a href="#" data-placeholder>청원</a></li>
+            </ul>
+          </section>
+        </nav>
+
+        <div class="menu-bottom">
+          <div class="menu-channel">
+            <p>조합원 서비스</p>
+            <a href="#" data-placeholder>경조사 신청</a>
+            <a href="#" data-placeholder>복지 안내</a>
+            <a href="#" data-placeholder>법률 상담</a>
+          </div>
+          <a class="member-portal" href="#" data-placeholder>
+            <span>
+              <small>MEMBERS ONLY</small>
+              조합원 전용공간
+            </span>
+            <b aria-hidden="true">↗</b>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div id="toast" class="toast" role="status" aria-live="polite">
+      세부 페이지는 준비 중입니다.
+    </div>
+  </body>
+</html>
