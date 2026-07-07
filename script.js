@@ -1,33 +1,46 @@
 const menu = document.querySelector("#site-menu");
-const openButton = document.querySelector("#menu-open");
+const openButtons = document.querySelectorAll("[data-open-menu]");
 const closeButton = document.querySelector("#menu-close");
 const toast = document.querySelector("#toast");
 const heroMedia = document.querySelector(".hero-media");
 const heroVideo = document.querySelector("#hero-video");
+const contentPage = document.querySelector("#content-page");
 
 let lastFocusedElement = null;
 let toastTimer = null;
 
-function openMenu() {
-  lastFocusedElement = document.activeElement;
+function setMenuExpanded(isExpanded) {
+  openButtons.forEach((button) => {
+    button.setAttribute("aria-expanded", String(isExpanded));
+  });
+}
+
+function openMenu(trigger = document.activeElement) {
+  lastFocusedElement = trigger;
   menu.classList.add("is-open");
   menu.setAttribute("aria-hidden", "false");
-  openButton.setAttribute("aria-expanded", "true");
+  setMenuExpanded(true);
   document.body.classList.add("is-menu-open");
   closeButton.focus();
 }
 
-function closeMenu() {
+function closeMenu({ restoreFocus = true } = {}) {
+  if (!menu.classList.contains("is-open")) {
+    return;
+  }
+
   menu.classList.remove("is-open");
   menu.setAttribute("aria-hidden", "true");
-  openButton.setAttribute("aria-expanded", "false");
+  setMenuExpanded(false);
   document.body.classList.remove("is-menu-open");
 
-  window.setTimeout(() => {
-    if (lastFocusedElement) {
-      lastFocusedElement.focus();
-    }
-  }, 340);
+  if (restoreFocus) {
+    window.setTimeout(() => {
+      if (lastFocusedElement) {
+        lastFocusedElement.focus();
+      }
+    }, 340);
+  }
 }
 
 function showToast(message = "세부 페이지는 준비 중입니다.") {
@@ -39,7 +52,28 @@ function showToast(message = "세부 페이지는 준비 중입니다.") {
   }, 2200);
 }
 
-openButton.addEventListener("click", openMenu);
+function showHome() {
+  closeMenu({ restoreFocus: false });
+  contentPage.hidden = true;
+  document.body.classList.remove("is-subpage");
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+function showSubPage(pageName) {
+  if (pageName !== "chairperson") {
+    showToast();
+    return;
+  }
+
+  closeMenu({ restoreFocus: false });
+  contentPage.hidden = false;
+  document.body.classList.add("is-subpage");
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+openButtons.forEach((button) => {
+  button.addEventListener("click", () => openMenu(button));
+});
 closeButton.addEventListener("click", closeMenu);
 
 document.addEventListener("keydown", (event) => {
@@ -78,6 +112,20 @@ document.querySelectorAll("[data-placeholder]").forEach((link) => {
   link.addEventListener("click", (event) => {
     event.preventDefault();
     showToast();
+  });
+});
+
+document.querySelectorAll("[data-page-link]").forEach((link) => {
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
+    showSubPage(link.dataset.pageLink);
+  });
+});
+
+document.querySelectorAll("[data-home]").forEach((link) => {
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
+    showHome();
   });
 });
 
