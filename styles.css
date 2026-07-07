@@ -88,8 +88,9 @@ button {
   inset: 0;
   width: 100%;
   height: 100%;
-  transform: scale(1.34);
-  filter: saturate(0.68) contrast(1.04) brightness(0.76);
+  object-position: 52% 42%;
+  transform: scale(1.04);
+  filter: saturate(0.82) contrast(1.03) brightness(0.72);
   transition: opacity 0.8s ease;
 }
 
@@ -527,32 +528,6 @@ button {
   letter-spacing: 0.16em;
 }
 
-.menu-account {
-  display: flex;
-  align-items: center;
-  gap: 38px;
-  margin-left: auto;
-  margin-right: 88px;
-  font-size: 0.84rem;
-  font-weight: 500;
-}
-
-.menu-language {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 0;
-  background: none;
-  border: 0;
-}
-
-.menu-language svg {
-  width: 21px;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 1.5;
-}
-
 .menu-close {
   position: absolute;
   top: 0;
@@ -699,42 +674,6 @@ button {
   color: #fff;
 }
 
-.member-portal {
-  display: flex;
-  width: 260px;
-  min-height: 74px;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 24px;
-  border: 1px solid rgba(255, 255, 255, 0.7);
-  border-radius: 40px;
-  transition:
-    color 0.25s ease,
-    background 0.25s ease;
-}
-
-.member-portal:hover {
-  color: #05619b;
-  background: #fff;
-}
-
-.member-portal span {
-  font-weight: 700;
-}
-
-.member-portal small {
-  display: block;
-  margin-bottom: 4px;
-  font-size: 0.55rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  opacity: 0.7;
-}
-
-.member-portal b {
-  font-size: 1.25rem;
-}
-
 .toast {
   position: fixed;
   bottom: 30px;
@@ -856,12 +795,6 @@ button {
     display: none;
   }
 
-  .menu-account {
-    margin-left: 0;
-    margin-right: 70px;
-    gap: 25px;
-  }
-
   .menu-grid {
     width: calc(100% - 56px);
     padding-top: 38px;
@@ -884,15 +817,12 @@ button {
     width: 100%;
   }
 
-  .member-portal {
-    width: 100%;
-  }
 }
 
 @media (max-width: 520px) {
   .hero-poster {
-    transform: scale(1.42);
-    object-position: 46% center;
+    object-position: 46% 48%;
+    transform: scale(1.08);
   }
 
   .brand {
@@ -925,10 +855,6 @@ button {
 
   .menu-topbar {
     padding-left: 22px;
-  }
-
-  .menu-account {
-    font-size: 0.73rem;
   }
 
   .menu-grid {

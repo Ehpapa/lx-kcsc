@@ -19,10 +19,10 @@
       <div class="hero-media" aria-hidden="true">
         <img
           class="hero-poster"
-          src="assets/hero-poster.png"
+          src="assets/lx-building-background.jfif"
           alt=""
-          width="1900"
-          height="900"
+          width="678"
+          height="452"
         />
         <video
           id="hero-video"
@@ -40,7 +40,7 @@
       </div>
 
       <header class="site-header">
-        <a class="brand" href="#" aria-label="한국국토정보공사노동조합 홈">
+        <a class="brand" href="#" data-home aria-label="한국국토정보공사노동조합 홈">
           <img
             class="brand-symbol"
             src="assets/union-symbol.png"
@@ -61,6 +61,7 @@
           id="menu-open"
           class="menu-open"
           type="button"
+          data-open-menu
           aria-label="전체 메뉴 열기"
           aria-controls="site-menu"
           aria-expanded="false"
@@ -115,16 +116,6 @@
 
       <div class="menu-topbar">
         <p class="menu-eyebrow">LX KCSC UNION</p>
-        <div class="menu-account">
-          <button class="menu-language" type="button" aria-label="언어 선택">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <circle cx="12" cy="12" r="9" />
-              <path d="M3 12h18M12 3c3 3.3 3 14.7 0 18M12 3c-3 3.3-3 14.7 0 18" />
-            </svg>
-            KOR
-          </button>
-          <a href="#" data-placeholder>조합원 로그인</a>
-        </div>
         <button id="menu-close" class="menu-close" type="button" aria-label="전체 메뉴 닫기">
           <span></span>
           <span></span>
@@ -136,7 +127,7 @@
           <section class="menu-group">
             <h2>조합소개</h2>
             <ul>
-              <li><a href="#" data-placeholder>위원장 소개</a></li>
+              <li><a href="#chairperson" data-page-link="chairperson">위원장 소개</a></li>
               <li><a href="#" data-placeholder>조직도</a></li>
               <li><a href="#" data-placeholder>집행부소개</a></li>
               <li><a href="#" data-placeholder>본부소개</a></li>
@@ -179,14 +170,135 @@
             <a href="#" data-placeholder>복지 안내</a>
             <a href="#" data-placeholder>법률 상담</a>
           </div>
-          <a class="member-portal" href="#" data-placeholder>
-            <span>
-              <small>MEMBERS ONLY</small>
-              조합원 전용공간
-            </span>
-            <b aria-hidden="true">↗</b>
-          </a>
         </div>
+      </div>
+    </section>
+
+    <section id="content-page" class="subpage" aria-label="위원장 소개" hidden>
+      <header class="sub-header">
+        <a class="sub-brand" href="#" data-home aria-label="한국국토정보공사노동조합 홈">
+          <img
+            src="assets/union-logo.png"
+            alt="민주노총 전국공공운수노조 한국국토정보공사노동조합"
+            width="304"
+            height="91"
+          />
+        </a>
+
+        <nav class="sub-nav" aria-label="상단 메뉴">
+          <a class="is-active" href="#chairperson" data-page-link="chairperson">조합소개</a>
+          <a href="#" data-placeholder>조합활동</a>
+          <a href="#" data-placeholder>자료실</a>
+          <a href="#" data-placeholder>조합광장</a>
+        </nav>
+
+        <button
+          class="sub-menu-open"
+          type="button"
+          data-open-menu
+          aria-label="전체 메뉴 열기"
+          aria-controls="site-menu"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </header>
+
+      <section class="sub-visual">
+        <div>
+          <h1>위원장 소개</h1>
+          <p><a href="#" data-home>home</a> <span aria-hidden="true">›</span> 조합소개 <span aria-hidden="true">›</span> 위원장 소개</p>
+        </div>
+      </section>
+
+      <nav class="intro-tabs" aria-label="조합소개 하위 메뉴">
+        <a class="is-active" href="#chairperson" data-page-link="chairperson">위원장 소개</a>
+        <a href="#" data-placeholder>조직도</a>
+        <a href="#" data-placeholder>집행부소개</a>
+        <a href="#" data-placeholder>본부소개</a>
+        <a href="#" data-placeholder>연혁</a>
+      </nav>
+
+      <div class="sub-layout">
+        <aside class="sub-sidebar" aria-label="조합소개 메뉴">
+          <h2>조합소개</h2>
+          <nav>
+            <a class="is-active" href="#chairperson" data-page-link="chairperson">위원장 소개</a>
+            <a href="#" data-placeholder>조직도</a>
+            <a href="#" data-placeholder>집행부소개</a>
+            <a href="#" data-placeholder>본부소개</a>
+            <a href="#" data-placeholder>연혁</a>
+          </nav>
+        </aside>
+
+        <article class="sub-content">
+          <div class="content-heading">
+            <div>
+              <h2>위원장 소개</h2>
+              <p><a href="#" data-home>홈</a> <span aria-hidden="true">›</span> 조합소개 <span aria-hidden="true">›</span> 위원장 소개</p>
+            </div>
+            <div class="content-actions" aria-label="페이지 도구">
+              <button type="button" aria-label="공유하기">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="7" cy="12" r="3" />
+                  <circle cx="17" cy="6" r="3" />
+                  <circle cx="17" cy="18" r="3" />
+                  <path d="m9.8 10.7 4.4-2.4M9.8 13.3l4.4 2.4" />
+                </svg>
+              </button>
+              <button type="button" aria-label="인쇄하기">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M7 8V3h10v5M7 17H5a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2" />
+                  <path d="M7 14h10v7H7zM8 18h8" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <section class="chairperson-card" aria-labelledby="chairperson-title">
+            <img
+              class="chairperson-photo"
+              src="assets/chairperson-photo.png"
+              alt="한국국토정보공사노동조합 위원장"
+              width="125"
+              height="140"
+            />
+            <h3 id="chairperson-title">위원장 소개</h3>
+            <div class="chairperson-message">
+              <p><strong>한국국토정보공사노동조합 제18대 위원장 위 경 열 입니다.</strong></p>
+              <p>
+                한국국토정보공사노동조합은<br />
+                민주노총 공공운수노조 소속으로<br />
+                1987년에 출범하였습니다.
+              </p>
+              <p>
+                한국국토정보공사노동조합 제18대 집행부는<br />
+                <em>“희망찬 미래, 다시 뛰는 국토노조!”</em> 라는<br />
+                슬로건을 걸고,
+              </p>
+              <p>
+                노동조합의 가치를 더욱 강화하고, 조합원들의 목소리를 적극적으로 대변하며,<br />
+                보다 나은 근로 환경과 권익을 보장하는 일에 최선을 다하겠습니다.
+              </p>
+              <p>
+                또한, 조합원들과 함께 변화하는 사회와 노동환경에 맞서<br />
+                지속적으로 발전하는 노동조합을 만들어가겠습니다.
+              </p>
+              <p>감사합니다.</p>
+              <p class="chairperson-role">한국국토정보공사노동조합 위원장</p>
+              <p class="chairperson-name">위&nbsp;&nbsp;경&nbsp;&nbsp;열</p>
+            </div>
+            <img
+              class="chairperson-logo"
+              src="assets/union-logo.png"
+              alt="한국국토정보공사노동조합"
+              width="304"
+              height="91"
+            />
+          </section>
+        </article>
       </div>
     </section>
 
