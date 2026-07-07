@@ -12,6 +12,7 @@ const subVisualCurrent = document.querySelector("#sub-visual-current");
 const contentTitle = document.querySelector("#content-title");
 const contentCurrent = document.querySelector("#content-current");
 const principleTabs = document.querySelectorAll("[data-principle-tab]");
+const principleDetail = document.querySelector(".principle-detail");
 const principleTitle = document.querySelector("[data-principle-title]");
 const principleBody = document.querySelector("[data-principle-body]");
 
@@ -160,6 +161,7 @@ function setPrinciple(name) {
 
   principleTitle.textContent = selected.title;
   principleBody.innerHTML = selected.body;
+  principleDetail.classList.toggle("is-declaration", name === "declaration");
 }
 
 openButtons.forEach((button) => {
