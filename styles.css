@@ -794,7 +794,7 @@ body.is-subpage .hero {
 
 .intro-tabs {
   display: grid;
-  max-width: 1160px;
+  max-width: 1392px;
   margin: 0 auto;
   grid-template-columns: repeat(5, minmax(0, 1fr));
   border-left: 1px solid #e5e9ed;
@@ -821,10 +821,10 @@ body.is-subpage .hero {
 
 .sub-layout {
   display: grid;
-  width: min(1160px, calc(100% - 64px));
+  width: min(1392px, calc(100% - 40px));
   margin: 44px auto 96px;
   grid-template-columns: 240px minmax(0, 1fr);
-  gap: clamp(48px, 6vw, 72px);
+  gap: clamp(36px, 4.8vw, 58px);
 }
 
 .sub-sidebar h2 {
@@ -1040,7 +1040,7 @@ body.is-subpage .hero {
   margin: 0 0 26px;
   padding-bottom: 14px;
   color: #15202b;
-  font-size: clamp(1.65rem, 2.3vw, 2.25rem);
+  font-size: clamp(1.34rem, 1.85vw, 1.72rem);
   font-weight: 800;
   letter-spacing: -0.06em;
 }
@@ -1059,7 +1059,7 @@ body.is-subpage .hero {
   display: grid;
   height: 390px;
   min-height: 390px;
-  grid-template-columns: minmax(300px, 42%) minmax(0, 1fr);
+  grid-template-columns: minmax(300px, 34%) minmax(0, 1fr);
   border: 1px solid #ececec;
   background: #fff;
 }
@@ -1116,7 +1116,7 @@ body.is-subpage .hero {
 
 .principle-detail {
   overflow-y: auto;
-  padding: clamp(30px, 4.5vw, 48px) clamp(28px, 5vw, 58px);
+  padding: clamp(30px, 4.5vw, 48px) clamp(28px, 4.2vw, 52px);
 }
 
 .principle-detail h4 {
@@ -1146,8 +1146,8 @@ body.is-subpage .hero {
 
 .principle-detail.is-declaration p {
   margin-bottom: 13px;
-  font-size: 0.86rem;
-  line-height: 1.68;
+  font-size: 0.9rem;
+  line-height: 1.7;
 }
 
 .principle-detail.is-declaration .principle-date {
@@ -1204,7 +1204,7 @@ body.is-subpage .hero {
   }
 
   .sub-layout {
-    width: calc(100% - 48px);
+    width: calc(100% - 36px);
     grid-template-columns: 210px minmax(0, 1fr);
     gap: 36px;
   }
@@ -1215,7 +1215,7 @@ body.is-subpage .hero {
   }
 
   .principle-board {
-    grid-template-columns: minmax(260px, 38%) minmax(0, 1fr);
+    grid-template-columns: minmax(240px, 34%) minmax(0, 1fr);
   }
 
   .principle-tab {
